@@ -4,10 +4,10 @@ import { Mail, FileText } from 'lucide-react';
 
 export function Contact() {
   const contacts = [
-    { name: "Telegram", handle: "@ben", icon: SiTelegram, href: "https://t.me/ben" },
-    { name: "Discord", handle: "ben#0000", icon: SiDiscord, href: "#" },
-    { name: "X / Twitter", handle: "@ben", icon: SiX, href: "#" },
-    { name: "Email", handle: "ben@email.com", icon: Mail, href: "mailto:ben@email.com" },
+    { name: "Telegram", handle: "@leoben909", icon: SiTelegram, href: "https://t.me/leoben909" },
+    { name: "Discord", handle: "leoben909", icon: SiDiscord, href: "https://discord.com/users/leoben909" },
+    { name: "X / Twitter", handle: "@leoben909", icon: SiX, href: "https://x.com/leoben909" },
+    { name: "Email", handle: "leoben909@gmail.com", icon: Mail, href: "mailto:leoben909@gmail.com" },
   ];
 
   return (
