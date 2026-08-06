@@ -47,7 +47,7 @@ export function About() {
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">Projects</div>
               </div>
               <div className="px-8 py-6 rounded-xl bg-card border border-card-border backdrop-blur-sm flex-1">
-                <div className="text-4xl font-mono font-bold text-white mb-2">2<span className="text-primary">+</span></div>
+                <div className="text-4xl font-mono font-bold text-white mb-2">4<span className="text-primary">+</span></div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">Years</div>
               </div>
             </div>

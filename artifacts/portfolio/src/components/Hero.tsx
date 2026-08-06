@@ -40,7 +40,10 @@ export function Hero() {
             Web3 Community Manager
           </h2>
           <h3 className="text-xs md:text-sm font-mono text-muted-foreground tracking-[0.2em] uppercase">
-            Discord & Telegram Moderator
+            Discord Moderator
+          </h3>
+          <h3 className="text-xs md:text-sm font-mono text-muted-foreground tracking-[0.2em] uppercase">
+            Telegram Moderator
           </h3>
         </motion.div>
 
@@ -51,7 +54,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <p className="text-muted-foreground font-light text-sm italic">
-            "Building healthy Web3 communities since 2022"
+            "Building healthy Web3 communities since 2021"
           </p>
         </motion.div>
 
