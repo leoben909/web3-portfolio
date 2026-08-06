@@ -58,8 +58,8 @@ export function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <a href="#projects" className="px-8 py-3 rounded-md bg-primary/10 border border-primary text-primary font-mono text-sm uppercase tracking-widest hover:bg-primary/20 hover:shadow-[0_0_15px_rgba(37,99,235,0.3)] transition-all">
-            View Projects
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-md bg-primary/10 border border-primary text-primary font-mono text-sm uppercase tracking-widest hover:bg-primary/20 hover:shadow-[0_0_15px_rgba(37,99,235,0.3)] transition-all">
+            View Resume
           </a>
           <a href="#contact" className="px-8 py-3 rounded-md bg-white/5 border border-white/10 text-white font-mono text-sm uppercase tracking-widest hover:bg-white/10 transition-all">
             Contact Me
