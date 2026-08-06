@@ -13,8 +13,11 @@ export function Hero() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
-          <span className="text-4xl font-mono text-white font-bold relative z-10 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">B</span>
+          <img
+            src="/profile.jpg"
+            alt="Ben"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
         </motion.div>
 
         <motion.h1 
