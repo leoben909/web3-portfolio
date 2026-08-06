@@ -3,35 +3,53 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    name: "CaptureGo",
+    name: "Unblocked",
     role: "Community Manager",
-    desc: "Built and moderated the Discord/Telegram, grew engagement by organizing community events and daily AMAs."
+    desc: "Led community growth and moderation across Discord and Telegram, managed daily engagement and user support.",
+    twitter: "onunblocked",
   },
   {
-    name: "Peaq Network",
-    role: "Community Manager",
-    desc: "Supported the DePIN ecosystem community, managed technical discussions and onboarding flows."
+    name: "CaptureGo",
+    role: "Moderator",
+    desc: "Moderated Discord and Telegram channels, handled user questions and maintained a safe, positive environment.",
+    twitter: "captur_go",
+  },
+  {
+    name: "MarginlyFi",
+    role: "Moderator",
+    desc: "Supported the DeFi community, managed discussions, filtered spam, and helped users with protocol questions.",
+    twitter: "marginlycom",
+  },
+  {
+    name: "Peaq",
+    role: "Contributor",
+    desc: "Contributed to the DePIN ecosystem community, participated in discussions and supported onboarding flows.",
+    twitter: "peaq",
   },
   {
     name: "Grass",
-    role: "Moderator",
-    desc: "Managed high-traffic Telegram and Discord during major growth phases for Wynd Network."
+    role: "Contributor",
+    desc: "Contributed during high-traffic growth phases, helping maintain community quality and user engagement.",
+    twitter: "grass",
   },
   {
     name: "IONet",
-    role: "Moderator",
-    desc: "Moderated GPU compute marketplace community, handled technical questions and FUD."
+    role: "Contributor",
+    desc: "Contributed to the GPU compute marketplace community, engaged with technical discussions and FUD management.",
+    twitter: "ionet",
   },
   {
-    name: "RWA.io",
+    name: "Dexodus",
     role: "Community Manager",
-    desc: "Led Real World Asset community discussions, educated members on RWA tokenization."
+    desc: "Built and managed the Dexodus Finance community across platforms, led moderation and community strategy.",
+    twitter: "DexodusFinance",
   },
   {
-    name: "EarnAlliance",
-    role: "Moderator",
-    desc: "Supported the Web3 gaming community across multiple platforms and channels."
-  }
+    name: "Earn Alliance",
+    role: "Community Manager",
+    desc: "Managed the Web3 gaming community, organized events, handled moderation and user support at scale.",
+    twitter: "EarnAlliance",
+  },
 ];
 
 export function Projects() {
@@ -70,8 +88,13 @@ export function Projects() {
                 {project.desc}
               </p>
               
-              <a href="#" className="inline-flex items-center gap-2 text-xs font-mono text-white/50 hover:text-primary transition-colors mt-auto tracking-wider uppercase">
-                View Project <ExternalLink className="w-3.5 h-3.5" />
+              <a
+                href={`https://x.com/${project.twitter}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-mono text-white/50 hover:text-primary transition-colors mt-auto tracking-wider uppercase"
+              >
+                @{project.twitter} <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </motion.div>
           ))}
