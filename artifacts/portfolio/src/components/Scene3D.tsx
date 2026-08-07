@@ -6,50 +6,55 @@ function Scene() {
   const icosahedronRef = useRef<THREE.Mesh>(null);
   const pointsRef = useRef<THREE.Points>(null);
 
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (icosahedronRef.current) {
-      icosahedronRef.current.rotation.y += delta * 0.1;
-      icosahedronRef.current.rotation.x += delta * 0.05;
+      icosahedronRef.current.rotation.y += delta * 0.09;
+      icosahedronRef.current.rotation.x += delta * 0.04;
     }
     if (pointsRef.current) {
-      pointsRef.current.rotation.y -= delta * 0.02;
+      pointsRef.current.rotation.y -= delta * 0.018;
+      pointsRef.current.rotation.x += delta * 0.005;
     }
   });
 
-  const particlesCount = 800;
+  // Reduced to 500 for performance; spread tighter for better composition
   const positions = useMemo(() => {
-    const positions = new Float32Array(particlesCount * 3);
-    for (let i = 0; i < particlesCount * 3; i++) {
-      positions[i] = (Math.random() - 0.5) * 15;
+    const arr = new Float32Array(500 * 3);
+    for (let i = 0; i < 500 * 3; i++) {
+      arr[i] = (Math.random() - 0.5) * 12;
     }
-    return positions;
-  }, [particlesCount]);
+    return arr;
+  }, []);
 
   return (
     <>
-      <ambientLight intensity={0.3} />
-      <pointLight position={[5, 5, 5]} intensity={2} color="#3b82f6" />
-      
+      <ambientLight intensity={0.25} />
+      <pointLight position={[4, 4, 4]} intensity={2.5} color="#3b82f6" />
+      <pointLight position={[-4, -2, 2]} intensity={0.8} color="#1d4ed8" />
+
       <mesh ref={icosahedronRef}>
-        <icosahedronGeometry args={[1.8, 1]} />
-        <meshStandardMaterial 
-          color="#2563eb" 
-          wireframe={true} 
-          emissive="#2563eb"
-          emissiveIntensity={0.5}
-          transparent={true}
-          opacity={0.8}
+        <icosahedronGeometry args={[1.9, 1]} />
+        <meshStandardMaterial
+          color="#2563eb"
+          wireframe
+          emissive="#1d4ed8"
+          emissiveIntensity={0.6}
+          transparent
+          opacity={0.75}
         />
       </mesh>
 
       <points ref={pointsRef}>
         <bufferGeometry>
-          <bufferAttribute
-            attach="attributes-position"
-            args={[positions, 3]}
-          />
+          <bufferAttribute attach="attributes-position" args={[positions, 3]} />
         </bufferGeometry>
-        <pointsMaterial size={0.02} color="#3b82f6" transparent opacity={0.6} sizeAttenuation={true} />
+        <pointsMaterial
+          size={0.025}
+          color="#60a5fa"
+          transparent
+          opacity={0.5}
+          sizeAttenuation
+        />
       </points>
     </>
   );
@@ -57,8 +62,12 @@ function Scene() {
 
 export function Scene3D() {
   return (
-    <div className="absolute inset-0 pointer-events-none z-0 opacity-80 mix-blend-screen">
-      <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+    <div className="absolute inset-0 pointer-events-none z-0">
+      <Canvas
+        camera={{ position: [0, 0, 5.5], fov: 42 }}
+        dpr={[1, 1.5]}
+        gl={{ antialias: false, powerPreference: 'high-performance', alpha: true }}
+      >
         <Scene />
       </Canvas>
     </div>
