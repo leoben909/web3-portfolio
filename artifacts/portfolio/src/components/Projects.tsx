@@ -89,13 +89,14 @@ export function Projects() {
               </p>
               
               <a
-                href={`https://x.com/${project.twitter}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-mono text-white/50 hover:text-primary transition-colors mt-auto tracking-wider uppercase"
-              >
-                @{project.twitter} <ExternalLink className="w-3.5 h-3.5" />
-              </a>
+  href={`https://x.com/${project.twitter}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`Visit ${project.name} on X`}
+  className="inline-flex items-center gap-2 text-white/50 hover:text-primary transition-colors mt-auto"
+>
+  <ExternalLink className="w-4 h-4" />
+</a>
             </motion.div>
           ))}
         </div>

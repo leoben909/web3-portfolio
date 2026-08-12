@@ -4,10 +4,10 @@ import { Mail, FileText } from 'lucide-react';
 
 export function Contact() {
   const contacts = [
-    { name: "Telegram", handle: "@leoben909", icon: SiTelegram, href: "https://t.me/leoben909" },
-    { name: "Discord", handle: "leoben909", icon: SiDiscord, href: "https://discord.com/users/leoben909" },
-    { name: "X / Twitter", handle: "@leoben909", icon: SiX, href: "https://x.com/leoben909" },
-    { name: "Email", handle: "leoben909@gmail.com", icon: Mail, href: "mailto:leoben909@gmail.com" },
+    { name: "Telegram", handle: "", icon: SiTelegram, href: "https://t.me/leoben909" },
+    { name: "Discord", handle: "", icon: SiDiscord, href: "https://discord.com/users/leoben909" },
+    { name: "X / Twitter", handle: "", icon: SiX, href: "https://x.com/leoben909" },
+    { name: "Email", handle: "", icon: Mail, href: "mailto:leoben909@gmail.com" },
   ];
 
   return (
@@ -70,8 +70,11 @@ export function Contact() {
           viewport={{ once: true }}
         >
           <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
-            © 2025 Ben · Web3 Community Manager
-          </p>
+  © 2026 Ben ·{" "}
+  <span className="text-cyan-500 [text-shadow:0_0_8px_rgba(4,211,238,0.7)]">
+    Web3 Community Manager
+  </span>
+</p> 
         </motion.div>
       </div>
     </section>
