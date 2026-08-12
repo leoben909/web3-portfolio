@@ -5,7 +5,7 @@ import { Mail, FileText } from 'lucide-react';
 export function Contact() {
   const contacts = [
     { name: "Telegram", handle: "", icon: SiTelegram, href: "https://t.me/leoben909" },
-    { name: "Discord", handle: "", icon: SiDiscord, href: "https://discord.com/users/leoben909" },
+    { name: "Discord", handle: "", icon: SiDiscord, href: "https://discord.com/users/1102080554280701985" },
     { name: "X / Twitter", handle: "", icon: SiX, href: "https://x.com/leoben909" },
     { name: "Email", handle: "", icon: Mail, href: "mailto:leoben909@gmail.com" },
   ];
